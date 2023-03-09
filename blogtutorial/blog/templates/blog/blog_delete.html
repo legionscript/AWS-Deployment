@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<a href="{% url 'index' %}">Cancel</a>
+    <h1>Update View</h1>
+    <h3>Are you sure you want to delete this blog article?</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="'submit">Confirm</button>
+    </form>
+{% endblock content %}
