@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)@6_684gu73to1zy)@bt^!ya(x9n%zk#7r-)n53wsbv2i2*xkv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.219.126.211', 'localhost']
 
 
 # Application definition
@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'blogtutorial.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'postgres',
+        'NAME': 'djangoblog',
         'USER': 'admin',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 
@@ -125,6 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
